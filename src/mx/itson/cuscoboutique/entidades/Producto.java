@@ -5,17 +5,17 @@
  */
 package mx.itson.cuscoboutique.entidades;
 
-import mx.itson.cuscoboutique.enumerador.Existencia;
 
 /**
  *
  * @author medin
  */
 public class Producto {
+    private int id;
     private String nombre;
     private String talla;
     private double precio;
-    private Existencia existencia;
+    private int existencia;
     private String descripcion;
     private String color;
 
@@ -64,14 +64,14 @@ public class Producto {
     /**
      * @return the existencia
      */
-    public Existencia getExistencia() {
+    public int getExistencia() {
         return existencia;
     }
 
     /**
      * @param existencia the existencia to set
      */
-    public void setExistencia(Existencia existencia) {
+    public void setExistencia(int existencia) {
         this.existencia = existencia;
     }
 
@@ -101,6 +101,20 @@ public class Producto {
      */
     public void setColor(String color) {
         this.color = color;
+    }
+
+    /**
+     * @return the id
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(int id) {
+        this.id = id;
     }
     
 }
