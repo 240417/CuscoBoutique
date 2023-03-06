@@ -72,7 +72,7 @@ public class main {
             }
             if(res==3){
             String dato ;
-            System.out.println("Esta es la informacion que pediste:...");
+            System.out.println("");
                 
                 producto = (Producto) p.buscarPorId(5);
                 
@@ -114,9 +114,9 @@ public class main {
                 
             }
             if(res==4){
-                System.out.println("Esta es la informacion que pediste:...");
-                
-                producto = (Producto) p.buscarPorId(1);
+                System.out.println("Ingresa el id:");
+                int _id=sr.nextInt();
+                producto = (Producto) p.buscarPorId(_id);
                 
                 System.out.println(producto.getNombre());
                 System.out.println(producto.getTalla());
