@@ -72,18 +72,20 @@ public class main {
             }
             if(res==3){
             String dato ;
-            System.out.println("");
+            System.out.println("Ingresa el id de el producto a modificar:");
+            int _id = sr.nextInt();
                 
-                producto = (Producto) p.buscarPorId(5);
-                
+                producto = (Producto) p.buscarPorId(_id);
+                System.out.println("Los datos del producto son:");
                 System.out.println(producto.getNombre());
                 System.out.println(producto.getTalla());
                 System.out.println(producto.getPrecio());
                 System.out.println(producto.getExistencia());
                 System.out.println(producto.getDescripcion());
                 System.out.println(producto.getColor());
-                
-            p.modificar(producto);
+                System.out.println("");
+                System.out.println("Ingrese los nuevos datos:");
+            //p.modificar(producto);
             
             System.out.println("nombre del producto:");
             dato=sr.next();
@@ -126,21 +128,9 @@ public class main {
                 System.out.println(producto.getColor());
                 
             }
-            //String
-        /*List<Producto> producto = (List<Producto>)p.buscarPorId(1);
-        
-        for (Producto pr: producto){
-        
-            System.out.println("id : " + pr.getId());
-            System.out.println("Nombre: " + pr.getNombre());
-            System.out.println("talla: " + pr.getTalla());
-            System.out.println("precio: " + pr.getPrecio());
-            System.out.println("Cantidad: " + pr.getExistencia());
-            System.out.println("descripcion: " + pr.getDescripcion());
-            System.out.println("Color: " + pr.getColor());
-            System.out.println("----------------------------------------------------------");
-        }*/}catch(Exception e){
-            System.out.println(e.getMessage());
+      
+        }catch(Exception e){
+            System.out.println("Ocurrio un error, porfavor intente mas tarde: "+e.getMessage());
         
         }
         

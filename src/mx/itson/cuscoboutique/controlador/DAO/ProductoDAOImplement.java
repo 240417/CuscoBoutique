@@ -114,8 +114,9 @@ public class ProductoDAOImplement implements ObjetoInterface{
             _statement.setInt(4, producto.getExistencia());
             _statement.setString(5, producto.getDescripcion());
             _statement.setString(6, producto.getColor());
-            
-            _respuesta = _statement.execute();
+            _statement.setInt(7, producto.getId());
+            _statement.execute();
+            _respuesta = _statement.getUpdateCount()==1;
         }catch(Exception ex){
         System.out.println(ex.getMessage());
         }
@@ -172,14 +173,5 @@ public class ProductoDAOImplement implements ObjetoInterface{
     
     }
 
-    @Override
-    public Object buscarPor(String _campo, String _dato) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public Object buscarTodo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
 }

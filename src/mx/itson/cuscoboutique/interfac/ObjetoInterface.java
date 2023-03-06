@@ -15,7 +15,5 @@ public interface ObjetoInterface {
     boolean eliminar(int _object);
     boolean modificar(Object _object);
     Object buscarPorId(int _id);
-    Object buscarPor(String _campo, String _dato);
-    Object buscarTodo();
 
 }
