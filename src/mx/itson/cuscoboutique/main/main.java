@@ -127,6 +127,7 @@ public class main {
                 System.out.println(producto.getDescripcion());
                 System.out.println(producto.getColor());
                 
+                        
             }
       
         }catch(Exception e){
